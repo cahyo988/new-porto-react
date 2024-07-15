@@ -59,7 +59,7 @@ export default function Home() {
             
 
           </div>
-          <div className="relative bg-gradient-to-b from-teal-400 rounded-full w-80 h-80 mt-10 mx-auto overflow-hidden">
+          <div className="relative bg-gradient-to-b from-teal-400 rounded-full w-60 h-60 mt-10 mx-auto overflow-hidden md:w-80 md:h-80">
             <Image src={myProfile} layout="fill" objectFit="cover" alt="my-profile" />
           </div>
         </section>
