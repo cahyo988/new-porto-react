@@ -28,20 +28,7 @@ import { DiMongodb } from "react-icons/di";
 import { FaGithub } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 
-
-
-
-
-
-
-
-
-
-
-
-
 import { useState } from "react";
-
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -60,9 +47,9 @@ export default function Home() {
           </nav>
           <div className="text-center p-10 ">
             <h2 className="text-4xl py-2 text-teal-700 font-medium md:text-6xl">Cahyo Saputra</h2>
-            <h3 className="text-2xl py-2 md:text-3xl">Developer And Designer...</h3>
+            <h3 className="text-2xl py-2 md:text-3xl">Developer And Designer.</h3>
             <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-slate-300">
-              Freelancer providing services for programming and design content needs. Join me down bellow and let's get cracking!
+              Freelancer providing services for programming and design content needs. Join me down bellow and let's get cracking.
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-14 py-3 text-gray-600">
@@ -73,7 +60,7 @@ export default function Home() {
 
           </div>
           <div className="relative bg-gradient-to-b from-teal-400 rounded-full w-80 h-80 mt-10 mx-auto overflow-hidden">
-            <Image src={myProfile} layout="fill" objectFit="cover" />
+            <Image src={myProfile} layout="fill" objectFit="cover" alt="my-profile" />
           </div>
         </section>
 
@@ -92,7 +79,7 @@ export default function Home() {
           </div>
           <div className="lg:flex gap-10">
             <div className="basis-1/2 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
-              <Image src={design} width={100} height={100} className="mx-auto" />
+              <Image src={design} width={100} height={100} className="mx-auto" alt="design"/>
               <h3 className="text-lg font-medium pt-8 pb-2">
                 Beautiful Design
               </h3>
@@ -113,7 +100,7 @@ export default function Home() {
               </div>
             </div>
             <div className="basis-1/2 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
-              <Image src={code} width={100} height={100} className="mx-auto" />
+              <Image src={code} width={100} height={100} className="mx-auto" alt="code" />
               <h3 className="text-lg font-medium pt-8 pb-2">
                 Programming Language
               </h3>
@@ -159,7 +146,7 @@ export default function Home() {
               </div>
             </div>
             <div className="basis-1/2 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-700">
-              <Image src={framework} width={100} height={100} className="mx-auto" />
+              <Image src={framework} width={100} height={100} className="mx-auto" alt="framework" />
               <h3 className="text-lg font-medium pt-8 pb-2">
                 Programming Framework
               </h3>
@@ -198,6 +185,7 @@ export default function Home() {
                 height={"100%"}
                 layout="responsive"
                 src={web1}
+                alt="web1"
               />
             </div>
             <div className="basis-1/3 flex-1">
@@ -207,6 +195,7 @@ export default function Home() {
                 height={"100%"}
                 layout="responsive"
                 src={web2}
+                alt="web2"
               />
             </div>
             <div className="basis-1/3 flex-1">
@@ -216,6 +205,7 @@ export default function Home() {
                 height={"100%"}
                 layout="responsive"
                 src={web3}
+                alt="web3"
               />
             </div>
             <div className="basis-1/3 flex-1">
@@ -225,6 +215,7 @@ export default function Home() {
                 height={"100%"}
                 layout="responsive"
                 src={web4}
+                alt="web4"
               />
             </div>
             <div className="basis-1/3 flex-1">
@@ -234,6 +225,7 @@ export default function Home() {
                 height={"100%"}
                 layout="responsive"
                 src={web5}
+                alt="web5"
               />
             </div>
           </div>
