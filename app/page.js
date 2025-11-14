@@ -24,8 +24,10 @@ import {
   FaBootstrap,
   FaGithub,
   FaInstagram,
+  FaNodeJs,
+  FaVuejs,
 } from "react-icons/fa";
-import { SiCanva } from "react-icons/si";
+import { SiCanva, SiFlutter, SiExpress, SiMysql, SiDart } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { DiMongodb } from "react-icons/di";
@@ -35,15 +37,29 @@ import { useState } from "react";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
-  const techStack = [
+  const frontendStack = [
     { icon: <AiOutlineHtml5 />, name: "HTML", color: "text-orange-500" },
     { icon: <FaCss3 />, name: "CSS", color: "text-blue-500" },
     { icon: <IoLogoJavascript />, name: "JS", color: "text-yellow-500" },
     { icon: <RiTailwindCssFill />, name: "Tailwind", color: "text-cyan-500" },
-    { icon: <FaPhp />, name: "PHP", color: "text-purple-500" },
     { icon: <FaBootstrap />, name: "Bootstrap", color: "text-indigo-500" },
     { icon: <FaReact />, name: "React", color: "text-blue-400" },
+    { icon: <RiNextjsLine />, name: "Next.js", color: "text-gray-800" },
+    { icon: <FaVuejs />, name: "Vue.js", color: "text-green-500" },
+  ];
+
+  const backendStack = [
+    { icon: <FaNodeJs />, name: "Node.js", color: "text-green-600" },
+    { icon: <SiExpress />, name: "Express", color: "text-gray-700" },
+    { icon: <FaPhp />, name: "PHP", color: "text-purple-500" },
+    { icon: <FaLaravel />, name: "Laravel", color: "text-red-500" },
     { icon: <DiMongodb />, name: "MongoDB", color: "text-green-500" },
+    { icon: <SiMysql />, name: "MySQL", color: "text-blue-600" },
+  ];
+
+  const mobileStack = [
+    { icon: <SiFlutter />, name: "Flutter", color: "text-blue-400" },
+    { icon: <SiDart />, name: "Dart", color: "text-blue-600" },
   ];
 
   const projects = [
@@ -206,7 +222,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Design Card */}
               <div className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700 transition-all duration-300">
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center mb-4">
@@ -240,30 +256,33 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Programming Card */}
+              {/* Frontend Card */}
               <div className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700 transition-all duration-300">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center mb-4">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-4">
                   <Image
                     src={code}
                     width={30}
                     height={30}
-                    alt="code"
+                    alt="frontend"
                     className="filter brightness-0 invert"
                   />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                  Programming
+                  Frontend
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                  Bahasa pemrograman untuk coding
+                  Teknologi frontend untuk UI/UX
                 </p>
                 <div className="grid grid-cols-4 gap-2">
-                  {techStack.map((tech, index) => (
+                  {frontendStack.map((tech, index) => (
                     <div
                       key={index}
                       className="flex flex-col items-center p-2 rounded-lg bg-white dark:bg-gray-700 hover:scale-110 transition-transform duration-300"
+                      title={tech.name}
                     >
-                      <span className={`text-2xl ${tech.color}`}>
+                      <span
+                        className={`text-2xl ${tech.color} dark:${tech.color}`}
+                      >
                         {tech.icon}
                       </span>
                     </div>
@@ -271,36 +290,65 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Framework Card */}
+              {/* Backend Card */}
               <div className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700 transition-all duration-300">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-violet-600 flex items-center justify-center mb-4">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mb-4">
                   <Image
                     src={framework}
                     width={30}
                     height={30}
-                    alt="framework"
+                    alt="backend"
                     className="filter brightness-0 invert"
                   />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                  Framework
+                  Backend
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                  Framework untuk membuat proyek
+                  Server-side development & database
+                </p>
+                <div className="grid grid-cols-3 gap-2">
+                  {backendStack.map((tech, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col items-center p-2 rounded-lg bg-white dark:bg-gray-700 hover:scale-110 transition-transform duration-300"
+                      title={tech.name}
+                    >
+                      <span
+                        className={`text-2xl ${tech.color} dark:${tech.color}`}
+                      >
+                        {tech.icon}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile Development Card */}
+              <div className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700 transition-all duration-300">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mb-4">
+                  <SiFlutter className="text-3xl text-white" />
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  Mobile Dev
+                </h4>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                  Cross-platform mobile development
                 </p>
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white dark:bg-gray-700">
-                    <RiNextjsLine className="text-2xl text-gray-800 dark:text-white" />
-                    <span className="text-gray-700 dark:text-gray-300">
-                      Next.js
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white dark:bg-gray-700">
-                    <FaLaravel className="text-2xl text-red-500" />
-                    <span className="text-gray-700 dark:text-gray-300">
-                      Laravel
-                    </span>
-                  </div>
+                  {mobileStack.map((tech, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white dark:bg-gray-700 hover:scale-105 transition-transform duration-300"
+                    >
+                      <span className={`text-2xl ${tech.color}`}>
+                        {tech.icon}
+                      </span>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">
+                        {tech.name}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

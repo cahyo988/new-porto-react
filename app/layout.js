@@ -16,6 +16,21 @@ export const metadata = {
   title: "CahyoDev",
   description:
     "Fullstack Developer & Designer yang passionate dalam menciptakan solusi digital inovatif. Spesialisasi dalam React, Next.js, Laravel, dan modern web technologies.",
+  icons: {
+    icon: [
+      {
+        url: "/icon.png?v=2",
+        type: "image/png",
+      },
+    ],
+    apple: [
+      {
+        url: "/icon.png?v=2",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/icon.png?v=2",
+  },
 };
 
 export default function RootLayout({ children }) {
