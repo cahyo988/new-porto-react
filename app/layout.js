@@ -27,9 +27,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <Script id="monetag-onclick" strategy="afterInteractive">
+
+        {/* Monetag OnClick tag #1 */}
+        <Script id="monetag-onclick-1" strategy="afterInteractive">
           {`(function(s){s.dataset.zone='10202962',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));`}
         </Script>
+
+        {/* Monetag Vignette/Interstitial tag #2 */}
+        <Script id="monetag-onclick-2" strategy="afterInteractive">
+          {`(function(s){s.dataset.zone='10202977',s.src='https://groleegni.net/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));`}
+        </Script>
+
       </head>
 
       <body className={`${poppins_init.variable} ${fraunces_init.variable}`}>
