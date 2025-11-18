@@ -1,6 +1,6 @@
 import { Poppins, Fraunces } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
+import SWRegister from "./sw-register";
 
 const poppins_init = Poppins({
   subsets: ["latin"],
@@ -26,15 +26,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* Monetag robust/sw.js must load BEFORE React */}
-        <Script 
-          src="/sw.js" 
-          strategy="beforeInteractive" 
-        />
-      </head>
-
       <body className={`${poppins_init.variable} ${fraunces_init.variable}`}>
+        {/* Register service worker */}
+        <SWRegister />
         {children}
       </body>
     </html>
