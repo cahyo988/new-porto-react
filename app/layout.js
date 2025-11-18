@@ -1,5 +1,6 @@
 import { Poppins, Fraunces } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const poppins_init = Poppins({
   subsets: ["latin"],
@@ -14,8 +15,7 @@ const fraunces_init = Poppins({
 
 export const metadata = {
   title: "CahyoDev",
-  description:
-    "Fullstack Developer & Designer...",
+  description: "Fullstack Developer & Designer...",
   icons: {
     icon: [{ url: "/icon.png?v=2", type: "image/png" }],
     apple: [{ url: "/icon.png?v=2", type: "image/png" }],
@@ -27,8 +27,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Robust Tag harus di HEAD */}
-        <script src="/sw.js"></script>
+        {/* Monetag robust/sw.js must load BEFORE React */}
+        <Script 
+          src="/sw.js" 
+          strategy="beforeInteractive" 
+        />
       </head>
 
       <body className={`${poppins_init.variable} ${fraunces_init.variable}`}>
