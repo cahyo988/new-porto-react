@@ -36,6 +36,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+      <script src="https://3nbf4.com/act/files/tag.min.js?z=10202860" data-cfasync="false" async></script>
+      </head>
       <body className={`${poppins_init.variable} ${fraunces_init.variable}`}>
         {children}
       </body>
