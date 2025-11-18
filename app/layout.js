@@ -1,6 +1,5 @@
 import { Poppins, Fraunces } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
 
 const poppins_init = Poppins({
   subsets: ["latin"],
@@ -27,15 +26,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Robust Tag harus di HEAD */}
+        <script src="/sw.js"></script>
+      </head>
+
       <body className={`${poppins_init.variable} ${fraunces_init.variable}`}>
         {children}
-
-        {/* Monetag Script (client-side only) */}
-        <Script
-          src="https://3nbf4.com/act/files/tag.min.js?z=10202860"
-          data-cfasync="false"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );
