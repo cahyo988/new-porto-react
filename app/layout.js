@@ -28,14 +28,19 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
 
-        {/* Monetag OnClick tag #1 */}
-        <Script id="monetag-onclick-1" strategy="afterInteractive">
+        {/* OnClick / Pleasant Tag */}
+        <Script id="monetag-10202962" strategy="afterInteractive">
           {`(function(s){s.dataset.zone='10202962',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));`}
         </Script>
 
-        {/* Monetag Vignette/Interstitial tag #2 */}
-        <Script id="monetag-onclick-2" strategy="afterInteractive">
+        {/* Vignette / Interstitial */}
+        <Script id="monetag-10202977" strategy="afterInteractive">
           {`(function(s){s.dataset.zone='10202977',s.src='https://groleegni.net/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));`}
+        </Script>
+
+        {/* In-Page Push */}
+        <Script id="monetag-10202984" strategy="afterInteractive">
+          {`(function(s){s.dataset.zone='10202984',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));`}
         </Script>
 
       </head>
