@@ -1,5 +1,6 @@
 import { Poppins, Fraunces } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const poppins_init = Poppins({
   subsets: ["latin"],
@@ -15,20 +16,10 @@ const fraunces_init = Poppins({
 export const metadata = {
   title: "CahyoDev",
   description:
-    "Fullstack Developer & Designer yang passionate dalam menciptakan solusi digital inovatif. Spesialisasi dalam React, Next.js, Laravel, dan modern web technologies.",
+    "Fullstack Developer & Designer...",
   icons: {
-    icon: [
-      {
-        url: "/icon.png?v=2",
-        type: "image/png",
-      },
-    ],
-    apple: [
-      {
-        url: "/icon.png?v=2",
-        type: "image/png",
-      },
-    ],
+    icon: [{ url: "/icon.png?v=2", type: "image/png" }],
+    apple: [{ url: "/icon.png?v=2", type: "image/png" }],
     shortcut: "/icon.png?v=2",
   },
 };
@@ -36,11 +27,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-      <script src="https://3nbf4.com/act/files/tag.min.js?z=10202860" data-cfasync="false" async></script>
-      </head>
       <body className={`${poppins_init.variable} ${fraunces_init.variable}`}>
         {children}
+
+        {/* Monetag Script (client-side only) */}
+        <Script
+          src="https://3nbf4.com/act/files/tag.min.js?z=10202860"
+          data-cfasync="false"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
