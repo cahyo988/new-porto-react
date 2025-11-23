@@ -26,6 +26,8 @@ import {
   FaInstagram,
   FaNodeJs,
   FaVuejs,
+  FaEnvelope,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { SiCanva, SiFlutter, SiExpress, SiMysql, SiDart } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -33,6 +35,7 @@ import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { DiMongodb } from "react-icons/di";
 
 import { useState } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -139,12 +142,18 @@ export default function Home() {
                   <span className="relative flex h-2 w-2">
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                   </span>
-                  Available for Freelance
+                  Tersedia untuk Freelance
                 </div>
 
                 <div>
                   <h2 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-3">
-                    Cahyo Saputra
+                    <TypeAnimation
+                      sequence={["Cahyo Saputra", 3000, "", 500]}
+                      wrapper="span"
+                      speed={50}
+                      repeat={Infinity}
+                      cursor={true}
+                    />
                   </h2>
                   <p className="text-2xl font-medium text-gray-600 dark:text-gray-400">
                     Fullstack Developer
@@ -152,7 +161,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg">
-                  Hello! I'm a Fullstack Developer passionate about building accessible and performant web applications.
+                  Halo! Saya adalah Fullstack Developer yang suka membangun aplikasi web yang mudah diakses dan digunakan.
                 </p>
 
                 {/* Social Links */}
@@ -181,6 +190,20 @@ export default function Home() {
                   >
                     <FaInstagram className="text-2xl" />
                   </a>
+                  <a
+                    href="mailto:cahyos493@gmail.com"
+                    className="p-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300"
+                  >
+                    <FaEnvelope className="text-2xl" />
+                  </a>
+                  <a
+                    href="https://wa.me/6289636958917"
+                    className="p-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaWhatsapp className="text-2xl" />
+                  </a>
                 </div>
               </div>
 
@@ -201,12 +224,12 @@ export default function Home() {
 
           {/* Services Section */}
           <section className="py-16">
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                Services
+            <div className="mb-12 text-center">
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 inline-block border-b-4 border-purple-600 pb-1">
+                Layanan
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
-                I offer a range of services to help you build your digital presence.
+              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                Saya menawarkan berbagai layanan untuk membantu membangun kehadiran digital Anda.
               </p>
             </div>
 
@@ -223,7 +246,7 @@ export default function Home() {
                   />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                  Design
+                  Desain
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
                   Membuat desain yang elegan dan sesuai kebutuhan
@@ -293,7 +316,7 @@ export default function Home() {
                   Backend
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                  Server-side development & database
+                  Pengembangan sisi server & database
                 </p>
                 <div className="grid grid-cols-3 gap-2">
                   {backendStack.map((tech, index) => (
@@ -318,10 +341,10 @@ export default function Home() {
                   <SiFlutter className="text-3xl text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                  Mobile Dev
+                  Pengembangan Mobile
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                  Cross-platform mobile development
+                  Pengembangan aplikasi mobile lintas platform
                 </p>
                 <div className="space-y-2">
                   {mobileStack.map((tech, index) => (
@@ -344,12 +367,12 @@ export default function Home() {
 
           {/* Portfolio Section */}
           <section className="py-16">
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                Selected Projects
+            <div className="mb-12 text-center">
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 inline-block border-b-4 border-purple-600 pb-1">
+                Proyek Pilihan
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
-                Here are some of the projects I've worked on.
+              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                Berikut adalah beberapa proyek yang telah saya kerjakan.
               </p>
             </div>
 
@@ -396,7 +419,7 @@ export default function Home() {
           {/* Footer */}
           <footer className="py-12 text-center border-t border-gray-200 dark:border-gray-800">
             <p className="text-gray-600 dark:text-gray-400">
-              &copy; {new Date().getFullYear()} Cahyo Saputra. All rights reserved.
+              &copy; {new Date().getFullYear()} Cahyo Saputra. Hak cipta dilindungi.
             </p>
           </footer>
         </div>

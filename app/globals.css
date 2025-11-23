@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    @apply bg-white dark:bg-gray-900 transition-colors duration-300;
+}
+
 /* Clean Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
@@ -32,4 +36,3 @@
 .focus-ring {
     @apply focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900;
 }
-
