@@ -135,30 +135,24 @@ export default function Home() {
           <section className="py-16 md:py-20">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm font-semibold">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm font-medium">
                   <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                   </span>
                   Available for Freelance
                 </div>
 
                 <div>
-                  <h2 className="text-5xl md:text-6xl font-black text-gray-900 dark:text-white mb-3">
+                  <h2 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-3">
                     Cahyo Saputra
                   </h2>
-                  <p className="text-2xl font-semibold text-purple-600 dark:text-purple-400">
-                    Developer & Designer
+                  <p className="text-2xl font-medium text-gray-600 dark:text-gray-400">
+                    Fullstack Developer
                   </p>
                 </div>
 
-                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Hai! 👋 Aku{" "}
-                  <span className="font-bold text-purple-600 dark:text-purple-400">
-                    Fullstack Developer
-                  </span>{" "}
-                  yang suka banget bikin website dan aplikasi keren. Dari design
-                  sampai jadi, aku siap bantu wujudin ide kamu jadi nyata!
+                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg">
+                  Hello! I'm a Fullstack Developer passionate about building accessible and performant web applications.
                 </p>
 
                 {/* Social Links */}
@@ -192,8 +186,7 @@ export default function Home() {
 
               {/* Profile Image */}
               <div className="relative mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-violet-600 rounded-full blur-2xl opacity-30"></div>
-                <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-200 dark:border-purple-800 shadow-xl">
+                <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-100 dark:border-gray-800">
                   <Image
                     src={myProfile}
                     alt="Cahyo Saputra"
@@ -208,23 +201,18 @@ export default function Home() {
 
           {/* Services Section */}
           <section className="py-16">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Layanan yang{" "}
-                <span className="text-purple-600 dark:text-purple-400">
-                  Aku Tawarkan
-                </span>
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Services
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Sejak awal perjalanan aku sebagai freelance developer, aku udah
-                kerja remote untuk beberapa klien dan kolaborasi bareng berbagai
-                tim
+              <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
+                I offer a range of services to help you build your digital presence.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Design Card */}
-              <div className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700 transition-all duration-300">
+              <div className="p-6 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800">
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center mb-4">
                   <Image
                     src={design}
@@ -257,7 +245,7 @@ export default function Home() {
               </div>
 
               {/* Frontend Card */}
-              <div className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700 transition-all duration-300">
+              <div className="p-6 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800">
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-4">
                   <Image
                     src={code}
@@ -291,7 +279,7 @@ export default function Home() {
               </div>
 
               {/* Backend Card */}
-              <div className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700 transition-all duration-300">
+              <div className="p-6 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800">
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mb-4">
                   <Image
                     src={framework}
@@ -325,7 +313,7 @@ export default function Home() {
               </div>
 
               {/* Mobile Development Card */}
-              <div className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700 transition-all duration-300">
+              <div className="p-6 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800">
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mb-4">
                   <SiFlutter className="text-3xl text-white" />
                 </div>
@@ -339,7 +327,7 @@ export default function Home() {
                   {mobileStack.map((tech, index) => (
                     <div
                       key={index}
-                      className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white dark:bg-gray-700 hover:scale-105 transition-transform duration-300"
+                      className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white dark:bg-gray-800"
                     >
                       <span className={`text-2xl ${tech.color}`}>
                         {tech.icon}
@@ -356,19 +344,12 @@ export default function Home() {
 
           {/* Portfolio Section */}
           <section className="py-16">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                <span className="text-purple-600 dark:text-purple-400">
-                  Portofolio
-                </span>{" "}
-                Aku
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Selected Projects
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Dengan keahlian dalam{" "}
-                <span className="font-bold text-purple-600 dark:text-purple-400">
-                  Programming
-                </span>
-                , aku kasih solusi digital yang inovatif dan efisien
+              <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
+                Here are some of the projects I've worked on.
               </p>
             </div>
 
@@ -376,21 +357,21 @@ export default function Home() {
               {projects.map((project, index) => (
                 <div
                   key={index}
-                  className="group rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden hover:border-purple-300 dark:hover:border-purple-700 transition-all duration-300 hover:-translate-y-2"
+                  className="group rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 overflow-hidden"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="object-cover"
                     />
                     <div
-                      className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+                      className={`absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                     ></div>
                   </div>
                   <div className="p-5">
-                    <h5 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                    <h5 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                       {project.title}
                     </h5>
                     <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
@@ -400,7 +381,7 @@ export default function Home() {
                       {project.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs rounded-full font-semibold"
+                          className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded-full font-medium"
                         >
                           {tag}
                         </span>
@@ -415,10 +396,7 @@ export default function Home() {
           {/* Footer */}
           <footer className="py-12 text-center border-t border-gray-200 dark:border-gray-800">
             <p className="text-gray-600 dark:text-gray-400">
-              Made with 💜 by{" "}
-              <span className="font-bold text-purple-600 dark:text-purple-400">
-                cahyoDEV
-              </span>
+              &copy; {new Date().getFullYear()} Cahyo Saputra. All rights reserved.
             </p>
           </footer>
         </div>

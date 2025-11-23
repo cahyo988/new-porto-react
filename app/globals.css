@@ -2,220 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Electric Purple Animations */
-@keyframes blob {
-    0%,
-    100% {
-        transform: translate(0px, 0px) scale(1);
-    }
-    33% {
-        transform: translate(30px, -50px) scale(1.1);
-    }
-    66% {
-        transform: translate(-20px, 20px) scale(0.9);
-    }
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-@keyframes bounce-slow {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes float {
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-@keyframes pulse-glow {
-    0%,
-    100% {
-        box-shadow:
-            0 0 20px rgba(139, 92, 246, 0.5),
-            0 0 40px rgba(168, 85, 247, 0.3);
-    }
-    50% {
-        box-shadow:
-            0 0 40px rgba(139, 92, 246, 0.8),
-            0 0 80px rgba(168, 85, 247, 0.5);
-    }
-}
-
-@keyframes shimmer {
-    0% {
-        background-position: -200% 0;
-    }
-    100% {
-        background-position: 200% 0;
-    }
-}
-
-@keyframes spin-slow {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.animate-blob {
-    animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-    animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-    animation-delay: 4s;
-}
-
-.animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient 8s ease infinite;
-}
-
-.animate-bounce-slow {
-    animation: bounce-slow 3s ease-in-out infinite;
-}
-
-.animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
-}
-
-.animate-float {
-    animation: float 3s ease-in-out infinite;
-}
-
-.animate-shimmer {
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.2),
-        transparent
-    );
-    background-size: 200% 100%;
-    animation: shimmer 2s infinite;
-}
-
-/* Electric Purple Scrollbar */
+/* Clean Scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f5f3ff;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #8b5cf6, #a855f7, #c084fc);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #7c3aed, #9333ea, #a855f7);
-}
-
-/* Dark mode scrollbar */
-.dark ::-webkit-scrollbar-track {
-    background: #1f2937;
+    background-color: #cbd5e1;
+    border-radius: 4px;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #7c3aed, #9333ea, #a855f7);
+    background-color: #475569;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #6d28d9, #7e22ce, #9333ea);
+    background-color: #64748b;
 }
 
-/* Electric Purple Glassmorphism */
-.glass {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(16px) saturate(180%);
-    border: 1px solid rgba(139, 92, 246, 0.2);
-}
-
-.glass-dark {
-    background: rgba(31, 41, 55, 0.8);
-    backdrop-filter: blur(16px) saturate(180%);
-    border: 1px solid rgba(139, 92, 246, 0.3);
-}
-
-/* Electric Purple Gradient Text */
-.gradient-text {
-    background: linear-gradient(135deg, #8b5cf6, #a855f7, #c084fc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-/* Hover effects */
-.hover-lift {
-    transition: all 0.3s ease;
-}
-
-.hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-/* Electric Purple Focus Styles */
+/* Utilities */
 .focus-ring {
     @apply focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900;
 }
 
-/* Smooth transitions */
-.smooth-transition {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Electric Purple Text Selection */
-::selection {
-    background-color: rgba(139, 92, 246, 0.3);
-    color: inherit;
-}
-
-.dark ::selection {
-    background-color: rgba(168, 85, 247, 0.5);
-}
-
-/* Neon Glow Effect */
-.neon-glow {
-    text-shadow:
-        0 0 10px rgba(139, 92, 246, 0.8),
-        0 0 20px rgba(168, 85, 247, 0.6),
-        0 0 30px rgba(192, 132, 252, 0.4);
-}
-
-/* Card Hover Lift Effect */
-.card-hover {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card-hover:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.25);
-}
